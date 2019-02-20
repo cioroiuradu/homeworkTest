@@ -3,7 +3,10 @@ package org.fasttrackit;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class WishListTest {
 
@@ -16,5 +19,8 @@ public class WishListTest {
         driver.findElement(By.linkText("VIEW DETAILS")).click();
         driver.findElement(By.className("link-wishlist")).click();
         driver.quit();
+
+
+
     }
 }
