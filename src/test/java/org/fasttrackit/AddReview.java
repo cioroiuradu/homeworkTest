@@ -32,7 +32,7 @@ public class AddReview {
         String expectedMessage = driver.findElement(By.xpath("//li[@class='success-msg']//span")).getText();
         String succesfulMessage = "Your review has been accepted for moderation.";
 
-        assertThat("Advanced search returned no result",succesfulMessage,is(expectedMessage));
+        assertThat("The review was not added",succesfulMessage,is(expectedMessage));
 
     }
 
