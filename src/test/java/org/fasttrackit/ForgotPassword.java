@@ -8,15 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ForgotPassword {
+public class ForgotPassword extends TestBase{
 
 
     @Test
     public void Password() {
 
-        System.setProperty("webdriver.chrome.driver", "D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
         driver.findElement(By.xpath("//div[@class='account-cart-wrapper']//span[@class='label']")).click();
         driver.findElement(By.xpath("//div[@class='links']//li[@class=' last']")).click();
         driver.findElement(By.xpath("//div[@class='content fieldset']//a[@class='f-left']")).click();

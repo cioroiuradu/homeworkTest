@@ -8,13 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactUsTest {
+public class ContactUsTest extends TestBase{
 
     @Test
     public void ContactUs() {
-        System.setProperty("webdriver.chrome.driver", "D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
+
         driver.findElement(By.linkText("CONTACT US")).click();
         driver.findElement(By.id("name")).sendKeys("Radu");
         driver.findElement(By.id("email")).sendKeys("raducu.papucu@email.com");

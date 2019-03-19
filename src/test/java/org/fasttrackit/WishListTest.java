@@ -8,13 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-public class WishListTest {
+public class WishListTest extends TestBase{
 
     @Test
     public void navigateThroughWishList() {
-        System.setProperty("webdriver.chrome.driver","D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
+
         driver.findElement(By.linkText("SALE")).click();
         driver.findElement(By.linkText("VIEW DETAILS")).click();
         driver.findElement(By.className("link-wishlist")).click();

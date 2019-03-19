@@ -8,14 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class EmailProduct {
+public class EmailProduct extends TestBase{
 
     @Test
     public void Email() {
-
-        System.setProperty("webdriver.chrome.driver", "D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
 
         driver.findElement(By.xpath("//div[@class='input-box']//input[@id='search']")).sendKeys("shirt");
         driver.findElement(By.xpath("//div[@class='input-box']//button[@title='Search']")).click();

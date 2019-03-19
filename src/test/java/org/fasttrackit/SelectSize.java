@@ -9,13 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class SelectSize {
+public class SelectSize extends TestBase{
     @Test
 
     public void selectSize() {
-        System.setProperty("webdriver.chrome.driver", "D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
+
         driver.findElement(By.id("search")).sendKeys("chelsea tee" + Keys.ENTER);
         driver.findElement(By.xpath("//li[@class = 'item last']//img[@id = 'product-collection-image-409']")).click();
         driver.findElement(By.xpath("//div[@class = 'input-box']//li[@id='option79']")).click();

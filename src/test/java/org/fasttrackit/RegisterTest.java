@@ -5,13 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class RegisterTest {
+public class RegisterTest extends TestBase {
 
     @Test
     public void RegisterAccount() {
-        System.setProperty("webdriver.chrome.driver","D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
+
         driver.findElement(By.linkText("ACCOUNT")).click();
         driver.findElement(By.linkText("Register")).click();
         driver.findElement(By.id("firstname")).sendKeys("Radu");

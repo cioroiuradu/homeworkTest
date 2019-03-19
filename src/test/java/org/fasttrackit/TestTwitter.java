@@ -10,13 +10,11 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class TestTwitter {
+public class TestTwitter extends TestBase{
     @Test
 
     public void testTwitter(){
-        System.setProperty("webdriver.chrome.driver", "D:\\homeworkTest\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://fasttrackit.org/selenium-test/");
+
         driver.findElement(By.linkText("TWITTER")).click();
 
         String expectedLink = driver.findElement(By.xpath("//a[./em[@class = 'twitter']]")).getText();
